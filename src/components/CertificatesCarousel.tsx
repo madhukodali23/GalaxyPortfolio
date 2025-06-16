@@ -6,7 +6,7 @@ import { ExternalLink } from "lucide-react";
 const certificates = [
   {
     title: "Build Your Own Responsive Website",
-    description: "learned bootstrap, flexbox",
+    description: "Learned bootstrap, flexbox",
     image: "https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/MEPTJDRYQO.png",
     url: "https://certificates.ccbp.in/academy/static-website?id=QORGHKOCZK",
   },
@@ -25,9 +25,21 @@ const certificates = [
   },
   {
     title: "Introduction to Databases",
-    description: "learned sql",
+    description: "Learned sql",
     image: "https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/JSCGXLBRWM.png",
     url: "https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/JSCGXLBRWM.png",
+  },
+  {
+    title : "JavaScript Essentials", 
+    description: "Learned Dealing With Asynchronous JS",
+    image:"https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/KCWJSCVIDO.png",
+    url: "https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/KCWJSCVIDO.png",
+  },
+  {
+    title : "Responsive Web Design using Flexbox", 
+    description: "Learned Responsive Web Design using Flexbox",
+    image: "https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/QMRCPLITNQ.png",
+    url: "https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/QMRCPLITNQ.png"
   },
 ];
 
