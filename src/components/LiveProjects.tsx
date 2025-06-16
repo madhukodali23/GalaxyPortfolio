@@ -27,6 +27,11 @@ const projects = [
     title: "App Store",
     description: "Web apps store using React, implemented search functionality.",
     live: "https://madhukappstore.ccbp.tech"
+  },
+  {
+    title: "Speed Typing Test",
+    description: "Web app speed typing test using html, css, js implemented timer functionality.",
+    live: "https://typingzone.ccbp.tech"
   }
 ];
 
