@@ -32,6 +32,11 @@ const projects = [
     title: "Speed Typing Test",
     description: "Web app speed typing test using html, css, js implemented timer functionality.",
     live: "https://typingzone.ccbp.tech"
+  },
+  {
+    title: "Nxt Watch", 
+    description : "Web streaming app using React, implemented real world youtube functionalities.", 
+    live: "streamwave.ccbp.tech"
   }
 ];
 
