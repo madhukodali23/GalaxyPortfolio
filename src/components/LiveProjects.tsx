@@ -36,7 +36,7 @@ const projects = [
   {
     title: "Nxt Watch", 
     description : "Web streaming app using React, implemented real world youtube functionalities.", 
-    live: "streamwave.ccbp.tech"
+    live: "https://streamwave.ccbp.tech"
   }
 ];
 
