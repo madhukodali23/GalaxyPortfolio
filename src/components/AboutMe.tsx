@@ -12,10 +12,18 @@ export const AboutMe: React.FC = () => {
           <span className="text-neonpink">I'm not just a developer, I'm a universe in motion.</span>
           <br />
           I believe{" "}
-          <span className="font-extrabold italic text-white">
-            great code tells a story
+          <span className="font-extrabold text-neonblue font-roboto">
+            good code tells a story
           </span>
-          {", and I'm writing mine in JS, Python, Node.js, and React."}
+          {", and I'm writing mine in "}
+          <span className="text-neongreen font-semibold">JS</span>
+          {", "}
+          <span className="text-neongreen font-semibold">Python</span>
+          {", "}
+          <span className="text-neongreen font-semibold">Node.js</span>
+          {", and "}
+          <span className="text-neongreen font-semibold">React</span>
+          {"."}
         </div>
         <div className="bg-neonblue/20 border border-neonblue rounded-xl text-sm px-4 py-2 mt-1 text-white font-orbitron">{'🎓'} B.Tech CSE @ SR Gudlavalleru | CGPA: 9.27</div>
       </div>

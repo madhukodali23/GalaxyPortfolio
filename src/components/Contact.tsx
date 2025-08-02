@@ -11,17 +11,48 @@ export const Contact: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      setSent(true);
-      toast({
-        title: "Message received! 🚀 I’ll get back to you within 24 hours.",
-        // The toast is retained only as a fallback/optional, but we'll show the message inline as required.
+    
+    try {
+      // Using Formspree for actual email delivery
+      const response = await fetch('https://formspree.io/f/mvgrbzor', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
       });
-    }, 1600);
+      
+      if (response.ok) {
+        setSending(false);
+        setSent(true);
+        toast({
+          title: "Message sent! 🚀 I'll get back to you within 24 hours.",
+        });
+        
+        // Reset form after successful submission
+        setTimeout(() => {
+          setForm({ name: "", email: "", message: "" });
+          setSent(false);
+        }, 3000);
+      } else {
+        throw new Error('Failed to send message');
+      }
+      
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setSending(false);
+      toast({
+        title: "Error sending message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -33,7 +64,7 @@ export const Contact: React.FC = () => {
             Hire Me
           </h3>
           <p className="text-base md:text-lg text-white/90 text-center mb-4 font-medium max-w-[32rem]">
-            I’m currently open to internships and freelance opportunities. If you’re looking for a dedicated Full Stack Developer who brings creativity and consistency — let’s connect!
+            I'm currently open to internships and freelance opportunities. If you're looking for a dedicated Full Stack Developer who brings creativity and consistency — let's connect!
           </p>
           <div className="flex flex-col md:flex-row gap-4 w-full justify-center items-center mb-2">
             <a
@@ -63,10 +94,10 @@ export const Contact: React.FC = () => {
         {sent && (
           <div className="flex flex-col items-center justify-center w-full bg-gradient-to-r from-neonblue via-neonpink to-neongreen rounded-2xl shadow-lg border-2 border-neonblue py-7 px-6 mb-6 animate-fade-in">
             <span className="text-2xl md:text-3xl font-bold font-orbitron text-white tracking-wide mb-2 drop-shadow-glow">
-              Message received! 🚀
+              Message sent! 🚀
             </span>
             <span className="text-white/90 font-orbitron text-base md:text-lg text-center">
-              I’ll get back to you within 24 hours.
+              I'll get back to you within 24 hours.
             </span>
           </div>
         )}

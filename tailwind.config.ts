@@ -21,6 +21,7 @@ export default {
 		extend: {
       fontFamily: {
         'orbitron': ['Orbitron', 'ui-sans-serif', 'sans-serif'],
+        'roboto': ['Roboto', 'ui-sans-serif', 'sans-serif'],
       },
 			colors: {
 				neonblue: "#00fff0",
@@ -47,11 +48,16 @@ export default {
           "0%,100%": { filter: "drop-shadow(0 0 16px #00fff0)" },
           "50%": { filter: "drop-shadow(0 0 36px #6c00ff)" }
         },
+        blink: {
+          "0%, 50%": { opacity: "1" },
+          "51%, 100%": { opacity: "0" }
+        },
 			},
 			animation: {
         float: "float 3s ease-in-out infinite",
         planetorbit: "orbit 12s linear infinite",
         glow: "glow 2s ease-in-out infinite",
+        blink: "blink 1.5s ease-in-out infinite",
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
