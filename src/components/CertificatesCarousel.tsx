@@ -1,6 +1,7 @@
 
 import React from "react";
 import { ExternalLink } from "lucide-react";
+import { title } from "process";
 
 // Certificates data
 const certificates = [
@@ -41,6 +42,27 @@ const certificates = [
     image: "https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/QMRCPLITNQ.png",
     url: "https://s3-ap-south-1.amazonaws.com/nkb-backend-ccbp-media-static/certificates/share/QMRCPLITNQ.png"
   },
+
+  {
+    title: "Model Context Protocol Workshop Completion",
+    description: "Learned About Model Context Protocol",
+    image: "https://cdn1.ccbp.in/misc/workshop-acad-mcp-mega-workshop-participation/2IC5VCBYMD.png",
+    url: "https://cdn1.ccbp.in/misc/workshop-acad-mcp-mega-workshop-participation/2IC5VCBYMD.png"
+  },
+  {
+    title: "Learning Path Generator Project Completion",
+    description: "Learned About Model Context Protocol",
+    image: "https://cdn1.ccbp.in/misc/workshop-acad-mcp-mega-workshop-completion/KSJYY4IKCB.png",
+    url: "https://cdn1.ccbp.in/misc/workshop-acad-mcp-mega-workshop-completion/KSJYY4IKCB.png"
+  },
+
+  {
+  "title": "From Resume to Offer: Interview Hacks from a Hiring Expert",
+  "description": "Learned Interview Hacks from a Hiring Expert",
+  "image": "https://cdn1.ccbp.in/misc/podcast-resume_to_offerletter-participation/BKL8LVKYTZ.png",
+  "url": "https://cdn1.ccbp.in/misc/podcast-resume_to_offerletter-participation/BKL8LVKYTZ.png"
+}
+
 ];
 
 export const CertificatesCarousel: React.FC = () => (
